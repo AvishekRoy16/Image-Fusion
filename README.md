@@ -1,1 +1,1 @@
-# Image Fusion (Capstone Project)
+# Image Fusion (Capstone Project - II)
