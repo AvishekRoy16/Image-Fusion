@@ -37,7 +37,7 @@ pipeline {
     }
     
     post {
-        failure {
+        always {
             emailext body: 'The build failed check to see what happened!', subject: 'Image Fusion Build Failed', to: 'avishek.roy19@st.niituniversity.in'
         }
     }
