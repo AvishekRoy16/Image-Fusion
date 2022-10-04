@@ -15,7 +15,6 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 import tensorflow as tf
 
-# define globals
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 
 MODEL_NAME = 'frozen_inference_graph-110871.pb'
