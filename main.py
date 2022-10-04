@@ -7,7 +7,6 @@ import cv2 as cv
 import imutils
 import logging
 
-#TODO: create error list
 ERROR_LIST = [] # e.g. shoulder detection error
 MIN_SHOULDER_DISTANCE=0
 
