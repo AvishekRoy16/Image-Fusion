@@ -13,7 +13,6 @@ from PIL import Image
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
-# %tensorflow_version 1.x
 import tensorflow as tf
 
 # define globals
