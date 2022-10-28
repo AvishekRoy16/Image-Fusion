@@ -19,4 +19,15 @@ def get_shoulder_loc_mannual(cloth_seg):
     #  TODO: take 10% width offset
     offset = int(0.15*width)
     # print(offset)
+    # right shoulder
+    col_vector = crop_seg[:, offset]
+    right_shoulder = (offset+start_crop[1], min(np.where(col_vector!=0)[0])+start_crop[0])
+    # left shoulder
+    col_vector = crop_seg[:, width-offset]
+    left_shoulder = (width-offset+start_crop[1], min(np.where(col_vector!=0)[0]+start_crop[0]))
+
+    shoulder_points = [right_shoulder, left_shoulder]
+    print("Shoulder Points:",shoulder_points)
+
+    return shoulder_points
     
