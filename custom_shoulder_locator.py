@@ -31,3 +31,19 @@ def get_shoulder_loc_mannual(cloth_seg):
 
     return shoulder_points
     
+def get_shoulder_details_mannual(cloth_seg):
+    try:
+        # get shoulder width and rotation angle
+        shoulder_points = get_shoulder_loc_mannual(cloth_seg)
+
+        distance = shoulder_points[1][0] - shoulder_points[0][0]
+        # rotation_angle = find_rotation_angle(shoulder_points[0], shoulder_points[1])
+
+        return shoulder_points, distance
+    except Exception as e:
+        print("Error at manual shoulder detection.\n"+str(e))
+        raise Exception("Invalid Source Image.")
+
+# test run
+# SAMPLES_DIR = os.environ['ROOT_DIR']+"/src/flask_app/static/images/samples"
+# sample_file = SAMPLES_DIR+"/profile_images/sample-profile-image1.jpg"
