@@ -16,3 +16,15 @@ def find_rotation_angle(a, b):
         return angle
     except ZeroDivisionError:
         raise Exception("left shoulder and right shoulder detected at same location.")
+
+def get_shoulder_details(self):
+    # get shoulder points
+    self.shoulder_points = self.get_shoulder_points()
+    # step 3: get shoulder width and rotation angle
+    # raises: shoulder not found.
+    if len(self.shoulder_points) < 2:
+        raise Exception("image without shoulder.")
+
+    distance = self.shoulder_points[1][0] - self.shoulder_points[0][0]
+    # rotation_angle = find_rotation_angle(self.shoulder_points[0], self.shoulder_points[1])
+    return distance
