@@ -1,5 +1,5 @@
 """
-module to locate shoulder details mannually in cloth 
+module to locate shoulder details mannually in cloth
 """
 
 from pose_estimator import find_rotation_angle
@@ -19,7 +19,7 @@ def get_shoulder_loc_mannual(cloth_seg):
     #  TODO: take 10% width offset
     offset = int(0.15*width)
     # print(offset)
-    # right shoulder
+    # right shoulder locator
     col_vector = crop_seg[:, offset]
     right_shoulder = (offset+start_crop[1], min(np.where(col_vector!=0)[0])+start_crop[0])
     # left shoulder locator
