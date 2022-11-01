@@ -11,7 +11,8 @@ pipeline {
 
         stage('Build Model') {
             steps { 
-                echo 'Model Build Succesdful'
+                git 'https://github.com/AvishekRoy16/Image-Fusion'
+                bat 'python custom_shoulder_locator.py'
             }
         }
 
