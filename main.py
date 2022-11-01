@@ -21,7 +21,6 @@ def get_shoulder_details(self):
     # get shoulder points
     self.shoulder_points = self.get_shoulder_points()
     # step 3: get shoulder width and rotation angle
-    # raises: shoulder not found.
     if len(self.shoulder_points) < 2:
         raise Exception("image without shoulder.")
 
