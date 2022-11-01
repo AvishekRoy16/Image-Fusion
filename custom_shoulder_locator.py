@@ -22,7 +22,7 @@ def get_shoulder_loc_mannual(cloth_seg):
     # right shoulder
     col_vector = crop_seg[:, offset]
     right_shoulder = (offset+start_crop[1], min(np.where(col_vector!=0)[0])+start_crop[0])
-    # left shoulder
+    # left shoulder locator
     col_vector = crop_seg[:, width-offset]
     left_shoulder = (width-offset+start_crop[1], min(np.where(col_vector!=0)[0]+start_crop[0]))
 
@@ -44,6 +44,6 @@ def get_shoulder_details_mannual(cloth_seg):
         print("Error at manual shoulder detection.\n"+str(e))
         raise Exception("Invalid Source Image.")
 
-# test run
+# Run test
 # SAMPLES_DIR = os.environ['ROOT_DIR']+"/src/flask_app/static/images/samples"
 # sample_file = SAMPLES_DIR+"/profile_images/sample-profile-image1.jpg"
