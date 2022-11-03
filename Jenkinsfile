@@ -11,8 +11,8 @@ pipeline {
 
         stage('Build Model') {
             steps { 
-                git branch: 'sample-2', url: 'https://github.com/adarshcode12/sample.git'
-                bat label:'',script:'python 2oddnumber.py'
+                git branch:'IF-13-pose-estimator', url: 'git@github.com:AvishekRoy16/Image-Fusion.git'
+                bat script:'custom_shoulder_locator.py'
             }
         }
 
