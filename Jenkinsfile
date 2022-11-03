@@ -11,7 +11,8 @@ pipeline {
 
         stage('Build Model') {
             steps { 
-                echo 'Model Build Succesdful'
+                git branch: 'sample-2', url: 'https://github.com/adarshcode12/sample.git'
+                bat label:'',script:'python 2oddnumber.py'
             }
         }
 
