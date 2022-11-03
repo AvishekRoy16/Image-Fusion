@@ -11,7 +11,8 @@ pipeline {
 
         stage('Build Model') {
             steps { 
-                echo 'Model Build Succesdful'
+                git branch: 'F-13-pose-estimator', url: 'https://github.com/AvishekRoy16/Image-Fusion.git'
+                bat 'python pose_detection.py'
             }
         }
 
