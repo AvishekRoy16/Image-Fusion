@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build Model') {
             steps { 
-                sh 'python3 --version'
+                sh 'main.py'
             }
         }
 
