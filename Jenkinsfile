@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build Model') {
             steps { 
-                echo 'Data Build Model'
+                sh 'python3 --version'
             }
         }
 
