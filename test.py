@@ -30,3 +30,12 @@ driver = webdriver.Chrome(r"C:\Users\Admin\Downloads\chromedriver_win32\chromedr
 # time.sleep(30)
 # driver.find_element("id","view").click()
 
+# TEST_CASE_3 (CHECKING BACK BUTTON)
+# driver.get("http://localhost:5000/")
+# driver.find_element("id","dropdown01").click()
+# driver.find_element("id","click").click()
+# driver.find_element("id","back").click()
+
+# TESTCASE4(CHECK TRYNEXT BUTTON)
+# driver.get("http://localhost:5000/tryon")
+# driver.find_element("id","trynext").click()
