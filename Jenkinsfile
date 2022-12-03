@@ -5,7 +5,7 @@ pipeline {
         stage('Data-Preprocessing') {
 
             steps {
-                sh "pip3 install --upgrade python3.9.10" 
+                sh "pip3 install python==3.8" 
                 sh 'python3 -m pip install -r requirements.txt'
             }
         }
