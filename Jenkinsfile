@@ -18,7 +18,7 @@ pipeline {
 
         stage('Build Flask Application') {
             steps { 
-                sh 'python3 /src/flask_app/app.py'
+                sh 'sudo cp -rvf * /src/flask_app/app.py'
             }
         }
         
