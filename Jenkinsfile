@@ -18,10 +18,8 @@ pipeline {
 
         stage('Build Flask Application') {
             steps { 
-                dir('/src/flask_app/') {
-                    sh "python3 app.py"
-                }
-            sh "pwd"
+                echo "hello"
+            }
         }
         
         
@@ -43,5 +41,4 @@ pipeline {
             emailext body: 'The build failed check to see what happened!', subject: 'Image Fusion Build Failed', to: 'avishek.roy19@st.niituniversity.in'
         }
     }
-
 }
