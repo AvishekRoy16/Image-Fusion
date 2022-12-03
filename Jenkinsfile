@@ -18,8 +18,10 @@ pipeline {
 
         stage('Build Flask Application') {
             steps { 
-                sh 'sudo cp -rvf * /src/flask_app/app.py'
-            }
+                dir('/src/flask_app/') {
+                    sh "python3 app.py"
+                }
+            sh "pwd"
         }
         
         
