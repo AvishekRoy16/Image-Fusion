@@ -31,14 +31,13 @@ pipeline {
         
         stage('Testing') {
             steps { 
-                echo "testing part"
+                echo "testing"
             }
         }
         
         stage('Deploy') {
             steps { 
-                sh "docker build -t myapp ."
-                sh "docker run -d -P myapp"
+                echo "deployed"
             }
         }
     }
