@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        docker {'python:3.9'}
-    }
+    agent any
 
     
     stages {
@@ -22,9 +20,7 @@ pipeline {
 
         stage('Build Flask Application') {
             steps { 
-                sh '''
-                py
-                '''
+                echo "Hello"
             }
         }
         
