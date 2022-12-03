@@ -1,19 +1,25 @@
 pipeline {
-    agent any
+    agent {
+        docker {'python:3'}
+    }
 
     
     stages {
         stage('Data-Preprocessing') {
 
             steps {
-                sh 'python3 -m pip install -r requirements.txt'
+                sh '''
+                pip3 --version
+                pip3 install -r requirements.txt
+                '''
+                echo 'building the application'
             }
         }
         
 
         stage('Build Model') {
             steps { 
-                sh 'python3 test.py'
+                sh 'python3 app.py'
             }
         }
 
@@ -33,14 +39,14 @@ pipeline {
         
         stage('Deploy') {
             steps { 
-                echo 'Deploy Succesdful'
+                echo 'Deploy Successful'
             }
         }
     }
     
-    // post {
-    //     always {
-    //         emailext body: 'The build failed check to see what happened!', subject: 'Image Fusion Build Failed', to: 'avishek.roy19@st.niituniversity.in'
-    //     }
-    // }
+    post {
+        always {
+            emailext body: 'The build failed check to see what happened!', subject: 'Image Fusion Build Failed', to: 'avishek.roy19@st.niituniversity.in'
+        }
+    }
 }
