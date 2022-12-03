@@ -18,7 +18,9 @@ pipeline {
 
         stage('Build Flask Application') {
             steps { 
-                echo "hello"
+                dir('/src/flask_app/'){
+                    sh 'python3 app.py'
+                }
             }
         }
         
