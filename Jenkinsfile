@@ -1,11 +1,13 @@
 pipeline {
-    agent any
+    agent {
+        docker {'python:3.9'}
+    }
+
     
     stages {
         stage('Data-Preprocessing') {
 
             steps {
-                sh "pip3 install python==3.8" 
                 sh 'python3 -m pip install -r requirements.txt'
             }
         }
