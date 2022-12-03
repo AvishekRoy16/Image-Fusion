@@ -11,14 +11,14 @@ pipeline {
 
         stage('Build Model') {
             steps { 
-                sh 'python3 main.py'
+                echo "hello"
             }
         }
 
 
         stage('Build Flask Application') {
             steps { 
-                echo "hello"
+                sh 'python3 /src/flask_app/app.py'
             }
         }
         
