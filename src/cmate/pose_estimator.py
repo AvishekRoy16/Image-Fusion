@@ -127,3 +127,4 @@ class PoseEstimator:
             plt.show()
         except IndexError:
             raise Exception("Shoulder not detected.")
+
