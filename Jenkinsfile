@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Data-Preprocessing') {
             steps { 
-                echo 'Data Preprocessing Succesdful'
+                sh 'python3 test.py'
             }
         }
         
@@ -18,9 +18,9 @@ pipeline {
 
         stage('Build Flask Application') {
             steps { 
-                dir('/src/flask_app/'){
-                    sh 'python3 app.py'
-                }
+                sh '''
+                py
+                '''
             }
         }
         
