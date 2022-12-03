@@ -3,15 +3,16 @@ pipeline {
     
     stages {
         stage('Data-Preprocessing') {
+
             steps { 
-                sh 'python3 test.py'
+                sh 'python3 -m pip install -r requirements.txt'
             }
         }
         
 
         stage('Build Model') {
             steps { 
-                echo "hello"
+                sh 'python3 test.py'
             }
         }
 
