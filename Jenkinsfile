@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Data-Preprocessing') {
 
-            steps { 
+            steps {
+                sh "pip3 install --upgrade python" 
                 sh 'python3 -m pip install -r requirements.txt'
             }
         }
@@ -39,9 +40,9 @@ pipeline {
         }
     }
     
-    post {
-        always {
-            emailext body: 'The build failed check to see what happened!', subject: 'Image Fusion Build Failed', to: 'avishek.roy19@st.niituniversity.in'
-        }
-    }
+    // post {
+    //     always {
+    //         emailext body: 'The build failed check to see what happened!', subject: 'Image Fusion Build Failed', to: 'avishek.roy19@st.niituniversity.in'
+    //     }
+    // }
 }
